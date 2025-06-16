@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: raw_data     # name you'll use in source() — e.g., source('raw_data', 'customers')
+    database: Zeustra  # optional if using just one DB
+    schema: public       # actual schema in your warehouse
+    tables:
+      - name: reonomy_properties_api
+        description: "RAW table containing nested json responses "
+        
+      - name: dbusa_tenants
+        description: "Raw tenants data for entities occupying properties"
+
+      - name: states_lookup
+        description: "a look up table for matching each US state name to its corresponding abbrv (created using seed)"
